@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spring Away Days — Mark's Football Weekender</title>
-<meta name="description" content="Six countries, 30 scored weekends, one vote. The matchday programme for Mark's spring 2027 football away day.">
+<meta name="robots" content="noindex, nofollow">
+<title>Spring Away Days — The Football Weekender</title>
+<meta name="description" content="Six countries, 30 scored weekends, one vote. The matchday programme for the spring 2027 football away day.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spring Away Days — Mark's Football Weekender">
+<meta property="og:title" content="Spring Away Days — The Football Weekender">
 <meta property="og:description" content="Six countries, 30 scored weekends, one vote. Scores, itineraries and the final six — cast yours.">
 <meta property="og:url" content="https://mgb9.github.io/grahamsawayday/">
 <meta property="og:image" content="https://mgb9.github.io/grahamsawayday/og.png">
@@ -385,7 +386,7 @@ html.js .tv-head{display:none}
 <header>
   <div class="kicker">Matchday Programme · Spring 2027 · For Approval</div>
   <h1>Spring<span class="row2">Away Days</span></h1>
-  <p class="sub">Mark's football weekend — Melissa's home with the children, so her terms are simple: keep it cheap and pick a kind weekend. Fly Saturday morning, home Monday morning, six countries on the board — window now open from January to mid-May 2027.</p>
+  <p class="sub">One football weekend — the boss is home with the children, so the terms are simple: keep it cheap and pick a kind weekend. Fly Saturday morning, home Monday morning, six countries on the board — window now open from January to mid-May 2027.</p>
 
   <div class="rules">
     <h2>The Rulebook</h2>
@@ -396,8 +397,8 @@ html.js .tv-head{display:none}
       <li class="x">16 May weekend — out</li>
       <li class="x">Milan city break — been there, done that (San Siro only as a backup game)</li>
       <li>Graham-checked against the Wolves fixture list (Championship 2026-27)</li>
-      <li>Melissa's terms: cheap, and a considerate weekend — she's home with the children</li>
-      <li>On the ballot: an optional <strong>Tuesday-morning return</strong> (3 nights) — pending Melissa's approval</li>
+      <li>The boss's terms: cheap, and a considerate weekend — she's home with the children</li>
+      <li>On the ballot: an optional <strong>Tuesday-morning return</strong> (3 nights) — pending approval from home</li>
       <li class="x">Sunday 7 March — Mothering Sunday. Don't even think about it</li>
       <li class="x">Bad dates: 5 &amp; 26 January — the weekends touching them (2–4 &amp; 23–25 Jan) are out</li>
       <li class="x">Sunday 14 February — Valentine's Day, with half term starting Monday. See the Milan derby card for how badly the calendar wants to test you</li>
@@ -409,7 +410,7 @@ html.js .tv-head{display:none}
     <div class="lgrid">
       <div class="lrow"><span class="lkey"><span class="swatch" style="background:var(--pitch)"></span>Atmosphere</span><span>How big the football occasion is — noise, stakes, stadium. <b>5</b> = hairs-on-neck European night stuff · <b>1</b> = quiet afternoon.</span></div>
       <div class="lrow"><span class="lkey"><span class="swatch" style="background:var(--pitch)"></span>Tickets</span><span>Odds of <b>face-value tickets from the official club shop</b>. <b>5</b> = buy online, no fuss, no membership · <b>1</b> = members-only instant sellout. The 🎟 line on each card says exactly where to buy, when the sale opens and rough prices.</span></div>
-      <div class="lrow"><span class="lkey"><span class="swatch" style="background:var(--stamp)"></span>Melissa</span><span>Sign-off odds. She's staying home with the children, so this scores <b>total cost</b> plus <b>considerate timing</b>. <b>5</b> = cheap trip on a quiet weekend · <b>1</b> = expensive and/or dreadful timing — abroad on <b>Mothering Sunday (7 March)</b> or the last weekend of the school holidays.</span></div>
+      <div class="lrow"><span class="lkey"><span class="swatch" style="background:var(--stamp)"></span>The Boss</span><span>Sign-off odds. The boss is staying home with the children, so this scores <b>total cost</b> plus <b>considerate timing</b>. <b>5</b> = cheap trip on a quiet weekend · <b>1</b> = expensive and/or dreadful timing — abroad on <b>Mothering Sunday (7 March)</b> or the last weekend of the school holidays.</span></div>
       <div class="lrow"><span class="lkey"><span class="swatch" style="background:var(--pitch)"></span>Value</span><span>Whole-weekend cost: flights + match tickets + hotels + food. <b>5</b> = cheap as chips · <b>1</b> = premium-priced weekend.</span></div>
       <div class="lrow"><span class="lkey"><span class="swatch" style="background:var(--gold)"></span>Graham</span><span>The Wolves clash check, against the 2026-27 Championship fixture list. <b>5</b> = Wolves away or season over — Molineux is dark, Graham travels guilt-free · <b>3</b> = missable home game (Lincoln, with respect) · <b>1</b> = <b>Birmingham City at Molineux</b>. He's not coming, don't ask. The 🐺 line names the fixture.</span></div>
       <div class="lrow"><span class="lkey">Tot /25</span><span>All five added together — the table view's default order. Maximum 25; anything over 21 is a serious contender.</span></div>
@@ -439,7 +440,7 @@ html.js .tv-head{display:none}
     <button class="toggle" id="dblToggle">⚽⚽ Two-game weekends</button>
     <select id="sortSel">
       <option value="date">Sort: by date</option>
-      <option value="melissa">Sort: Melissa sign-off</option>
+      <option value="melissa">Sort: Boss sign-off</option>
       <option value="tickets">Sort: easiest tickets</option>
       <option value="graham">Sort: Graham-proof</option>
       <option value="overall">Sort: overall score</option>
@@ -459,7 +460,7 @@ html.js .tv-head{display:none}
       <th data-k="fix">Fixture(s)</th>
       <th data-k="atm" title="Atmosphere">Atm</th>
       <th data-k="tix" title="Ticket ease">Tkt</th>
-      <th data-k="mel" title="Melissa sign-off (cost + timing)">Mel</th>
+      <th data-k="mel" title="Boss sign-off (cost + timing)">Boss</th>
       <th data-k="val" title="Value">Val</th>
       <th data-k="gra" title="Graham / Wolves clash">Gra</th>
       <th data-k="tot" title="Total out of 25">Tot</th>
@@ -473,9 +474,9 @@ html.js .tv-head{display:none}
   <h3>Small print — worth reading</h3>
   <p><strong>Kick-off days aren't set yet.</strong> Leagues fix the weekend now but confirm Saturday-or-Sunday only later: Italy &amp; Germany ~4–6 weeks ahead, Spain ~2 weeks, Portugal barely 10 days. For two-game weekends, book the trip around the weekend and pick your pair once days are announced. Weekends with 3–4 candidate games are the safest bets.</p>
   <p><strong>Tickets:</strong> buy only from official club shops (linked in our chat notes). Most open general sale 1–4 weeks before kick-off, no membership needed, except the marked hard tickets. Avoid viagogo-type resellers — clubs void those.</p>
-  <p><strong>Scores:</strong> Atmosphere = the football occasion · Tickets = odds of face-value seats (the 🎟 line on each card says exactly where, when and for how much) · Melissa = sign-off odds — cost plus considerate timing while she's home with the kids · Value = flights + tickets + hotels combined · Graham = Wolves clash check — 5 wolves means Molineux is dark that weekend, 1 means it's derby day and he's not coming.</p>
-  <p><strong>The nearly-missed list:</strong> the EU's biometric Entry/Exit System is live — allow extra time at passport control, especially for early flights. <strong>ETIAS</strong> (the €20 EU travel authorisation for UK citizens) launches around late 2026 and may be mandatory by April 2027 — apply only at the official EU site, travel-europe.europa.eu/etias; reminder set for 1 Feb 2027. Passports must be issued within 10 years and valid 3+ months beyond the return date — check now. Como, Benfica and Porto may be in European or domestic cup runs that can move league fixtures (17–18 Apr sits safely between the Champions League QFs and semis; late-April/May weekends carry more risk). The 06:15 Porto→Stansted flight needs a pre-booked ~€25 taxi (metro starts too late) and a 2-hour airport arrival. Italian match tickets are named per person — have every traveller's passport details ready and buy all seats in one transaction. And double-check Melissa's own school's 2026-27 calendar — academies sometimes differ from the county dates.</p>
-  <p><strong>The Tuesday option (pending Melissa):</strong> if a Sat–Tue window is approved, Monday-night fixtures become watchable rather than a scheduling risk, and returns get cheaper and kinder — flagged here so no option is scored on it until it's approved.</p>
+  <p><strong>Scores:</strong> Atmosphere = the football occasion · Tickets = odds of face-value seats (the 🎟 line on each card says exactly where, when and for how much) · The Boss = sign-off odds — cost plus considerate timing while she's home with the kids · Value = flights + tickets + hotels combined · Graham = Wolves clash check — 5 wolves means Molineux is dark that weekend, 1 means it's derby day and he's not coming.</p>
+  <p><strong>The nearly-missed list:</strong> the EU's biometric Entry/Exit System is live — allow extra time at passport control, especially for early flights. <strong>ETIAS</strong> (the €20 EU travel authorisation for UK citizens) launches around late 2026 and may be mandatory by April 2027 — apply only at the official EU site, travel-europe.europa.eu/etias; reminder set for 1 Feb 2027. Passports must be issued within 10 years and valid 3+ months beyond the return date — check now. Como, Benfica and Porto may be in European or domestic cup runs that can move league fixtures (17–18 Apr sits safely between the Champions League QFs and semis; late-April/May weekends carry more risk). The 06:15 Porto→Stansted flight needs a pre-booked ~€25 taxi (metro starts too late) and a 2-hour airport arrival. Italian match tickets are named per person — have every traveller's passport details ready and buy all seats in one transaction. And double-check the school's own 2026-27 calendar — academies sometimes differ from the county dates.</p>
+  <p><strong>The Tuesday option (pending the boss):</strong> if a Sat–Tue window is approved, Monday-night fixtures become watchable rather than a scheduling risk, and returns get cheaper and kinder — flagged here so no option is scored on it until it's approved.</p>
   <p><strong>January and February flights are already on sale</strong> — winter-window trips can be booked at today's prices, unlike the spring options that wait on Ryanair's summer release. Winter caveats: kick-off days for Jan–Feb rounds get confirmed from ~Nov–Dec 2026, Wolves' FA Cup third-round fate (weekend of 9–10 Jan) is known at the December draw, and northern Europe in January is 0–6°C and damp — pack accordingly.</p>
   <p><strong>Flight times are current-season schedules</strong> — the routes are real but exact timings for spring 2027 firm up when each carrier publishes its season; the November flight reminder re-checks them. <strong>Graham scores assume Saturday Wolves fixtures</strong> — Sky moves Championship games to Friday/Sunday for TV, so his clash picture is final only when TV picks land ~6 weeks out.</p>
   <p><strong>No football anywhere</strong> on 27–28 March (international break) or, in Germany, on 1–2 May.</p>
@@ -518,7 +519,7 @@ html.js .tv-head{display:none}
     <div class="fvp">One of world football's great derbies in winter sunshine, made gettable by the 70,000-seat La Cartuja. Hard ticket, huge occasion, clean Wolves weekend.</div>
   </div><div class="fvs">£320–520<small>per person</small></div></div>
 </div>
-<div class="rules" style="margin-top:16px"><strong style="color:var(--stamp)">Bonus ballot — Tuesday return?</strong> Extending Sat–Mon to Sat–Tue adds a third night but covers Monday-evening kick-offs (Serie A, La Liga and Portugal all use them), swaps the 06:15 Porto departure for a civilised Tuesday flight, and Tuesday fares are the week's cheapest. Melissa's call: ☐ allowed &nbsp; ☐ Monday you come home</div>
+<div class="rules" style="margin-top:16px"><strong style="color:var(--stamp)">Bonus ballot — Tuesday return?</strong> Extending Sat–Mon to Sat–Tue adds a third night but covers Monday-evening kick-offs (Serie A, La Liga and Portugal all use them), swaps the 06:15 Porto departure for a civilised Tuesday flight, and Tuesday fares are the week's cheapest. The boss's call: ☐ allowed &nbsp; ☐ Monday you come home</div>
 <a class="pdfbtn" download="spring-away-days-vote.pdf" href="spring-away-days-vote.pdf">⬇ Download the one-page PDF for the group chat</a>
 </div><!-- /view-vote -->
 
@@ -558,7 +559,7 @@ html.js .tv-head{display:none}
 <h2 class="sec">The airport question — pick one</h2>
 <div class="check">
   <ul>
-    <li><strong>Option 1 — Stansted both ways (recommended for "home Monday morning"):</strong> Ryanair STN→Lisbon Sat morning + Porto→STN Mon 06:15. One car park, one airport, back by ~10:30. STN is ~1h40 from Warwickshire.</li>
+    <li><strong>Option 1 — Stansted both ways (recommended for "home Monday morning"):</strong> Ryanair STN→Lisbon Sat morning + Porto→STN Mon 06:15. One car park, one airport, back by ~10:30. STN is ~1h40 from home.</li>
     <li><strong>Option 2 — All Birmingham:</strong> easyJet BHX→Lisbon Sat 10:15 out, Ryanair Porto→BHX Mon ~22:35 back. Local airport both ways, but home ~1am Tuesday rather than Monday morning.</li>
   </ul>
 </div>
@@ -594,7 +595,7 @@ html.js .tv-head{display:none}
 <div class="sig">Compiled 19 July 2026 · key fixtures re-verified against official league &amp; club sources · kick-off days subject to change</div>
 </div>
 
-<div class="mbar" id="mbar"><span class="n" id="mnum">0</span><span id="mtext">shortlisted for Melissa's verdict</span><button class="copybtn" id="copybtn">Copy list</button></div>
+<div class="mbar" id="mbar"><span class="n" id="mnum">0</span><span id="mtext">shortlisted for the boss's verdict</span><button class="copybtn" id="copybtn">Copy list</button></div>
 
 <script>
 const DATA=[
@@ -712,7 +713,7 @@ const DATA=[
  body:"The connoisseur's pick nobody mentions: Bollaert-Delelis is routinely called the best atmosphere in France — a 38,000-seat mining-town cauldron where the Corons anthem before kick-off gives San Siro a run. And the route is the trick: <strong>Eurostar, no airports at all.</strong> London to Lille in 85 minutes, Lens 40 minutes on. The Lille derby (20–21 Mar) is the impossible ticket; Nice is the gettable one.",
  atm:5,tix:3,mel:4,val:4,gra:5,gnote:"Wolves away at Stoke — Molineux dark",
  tnote:"billetterie.rclens.fr — big season-ticket base, but Nice-tier fixtures reach general sale (~€20–50) a few weeks out. The Lille derby never does.",
- itin:["Train to St Pancras, Eurostar to Lille (~1h25). Check in around Vieux-Lille, moules-frites lunch. TER to Lens (40 min) if the match lands Saturday — Bollaert is a short walk from the station.","Match day if Sunday; otherwise Lille's old town, the Palais des Beaux-Arts, and a slow Flemish lunch. Lens town itself is small — Lille is the base.","Eurostar home from Lille, morning departures — back in Warwickshire by early afternoon with no baggage carousel involved."],
+ itin:["Train to St Pancras, Eurostar to Lille (~1h25). Check in around Vieux-Lille, moules-frites lunch. TER to Lens (40 min) if the match lands Saturday — Bollaert is a short walk from the station.","Match day if Sunday; otherwise Lille's old town, the Palais des Beaux-Arts, and a slow Flemish lunch. Lens town itself is small — Lille is the base.","Eurostar home from Lille, morning departures — back by early afternoon with no baggage carousel involved."],
  fly:"No flights — Eurostar London–Lille ~£90–180 rtn, Lens 40 min by local train"}
 ,{id:"psg",country:"france",city:"Paris — Parc des Princes",dd:"17–18",mm:"APR",dateKey:20270417,dbl:false,
  match:"PSG v Lille",
@@ -720,7 +721,7 @@ const DATA=[
  body:"The completeness option: PSG at home to Lille on the top-pick weekend. The Parc is a proper stadium and the Ultras end brings noise, but it's the most expensive ticket-and-city combination on the board and the atmosphere trails Lens for half the price. Easiest French logistics though — Eurostar or a BHX flight, and Paris needs no selling.",
  atm:3,tix:3,mel:2,val:2,gra:5,gnote:"Wolves away at Stoke — Molineux dark",
  tnote:"billetterie.psg.fr — general sale exists for league games, but decent seats run €60–150 and sell quickly. No membership needed, just an account and fast fingers.",
- itin:["Eurostar to Gare du Nord (~2h15) or fly BHX–CDG. Left bank wander, long lunch. PSG v Lille at the Parc if it lands Saturday — metro line 9 to Porte de Saint-Cloud.","Match day if Sunday; otherwise Musée d'Orsay, Montmartre, and a proper Parisian Sunday. The Parc stadium tour runs most days.","Eurostar home in the morning — St Pancras by late morning, Warwickshire by lunch."],
+ itin:["Eurostar to Gare du Nord (~2h15) or fly BHX–CDG. Left bank wander, long lunch. PSG v Lille at the Parc if it lands Saturday — metro line 9 to Porte de Saint-Cloud.","Match day if Sunday; otherwise Musée d'Orsay, Montmartre, and a proper Parisian Sunday. The Parc stadium tour runs most days.","Eurostar home in the morning — St Pancras by late morning, home by lunch."],
  fly:"Eurostar ~£100–200 rtn, or BHX→CDG direct ~£90–160"}
 
 ,{id:"braga-porto",country:"portugal",city:"Lisbon + Braga",dd:"9–10",mm:"JAN",dateKey:20270109,dbl:true,
@@ -890,7 +891,7 @@ function render(){
     <div class="stub">
       <div class="score"><span class="lbl">Atmosphere</span>${pips(d.atm)}</div>
       <div class="score"><span class="lbl">Tickets</span>${pips(d.tix)}</div>
-      <div class="score hot"><span class="lbl">Melissa</span>${pips(d.mel)}</div>
+      <div class="score hot"><span class="lbl">The Boss</span>${pips(d.mel)}</div>
       <div class="score"><span class="lbl">Value</span>${pips(d.val)}</div>
       <div class="score gra" title="${d.gnote}"><span class="lbl">Graham</span>${pips(d.gra)}</div>
     </div>

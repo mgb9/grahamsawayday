@@ -1,0 +1,5 @@
+# The HTML page carries a noindex meta tag, so crawlers must be allowed
+# to fetch it for that to work. Only the PDF (which cannot carry a meta
+# tag) is blocked from crawling.
+User-agent: *
+Disallow: /spring-away-days-vote.pdf
