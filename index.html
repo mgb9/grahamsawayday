@@ -848,9 +848,9 @@ const countEl=document.getElementById('count');
 const mbar=document.getElementById('mbar');
 const mnum=document.getElementById('mnum');
 let country='all', dblOnly=false, sortBy='date';
-let saved=[];try{saved=JSON.parse(localStorage.getItem('shortlist')||'[]')}catch(e){}
+let saved=[];try{saved=JSON.parse(localStorage.getItem('grahamsawayday-shortlist')||'[]')}catch(e){}
 const hearts=new Set(saved);
-const saveHearts=()=>{try{localStorage.setItem('shortlist',JSON.stringify([...hearts]))}catch(e){}};
+const saveHearts=()=>{try{localStorage.setItem('grahamsawayday-shortlist',JSON.stringify([...hearts]))}catch(e){}};
 
 const MONTH={JAN:'January',FEB:'February',MAR:'March',APR:'April',MAY:'May'};
 function pips(n,hot){let s='<span class="pips" role="img" aria-label="'+n+' out of 5">';for(let i=1;i<=5;i++)s+=`<span class="pip ${i<=n?'f':''}"></span>`;return s+'</span>'}
@@ -923,7 +923,8 @@ document.getElementById('copybtn').addEventListener('click',e=>{
   const picks=DATA.filter(d=>hearts.has(d.id));
   const text='My away-day shortlist:\n'+picks.map(d=>`\u2022 ${plain(d.match)} \u2014 ${d.city}, ${d.dd} ${MONTH[d.mm]} 2027`).join('\n')+'\nhttps://mgb9.github.io/grahamsawayday/';
   const done=()=>{e.target.textContent='Copied \u2713';setTimeout(()=>e.target.textContent='Copy list',1500)};
-  navigator.clipboard?navigator.clipboard.writeText(text).then(done,()=>prompt('Copy this:',text)):prompt('Copy this:',text);
+  const legacy=()=>{const t=document.createElement('textarea');t.value=text;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(err){}t.remove();ok?done():prompt('Copy this:',text)};
+  navigator.clipboard?navigator.clipboard.writeText(text).then(done,legacy):legacy();
 });
 document.getElementById('controls').style.display='';
 render();
