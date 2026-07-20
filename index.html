@@ -319,6 +319,12 @@ select{
   border-radius:999px;padding:6px 13px;cursor:pointer;transition:all .18s ease;
 }
 .mbar .copybtn:hover{background:var(--paper-hi);color:var(--ink)}
+.tripnav{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 4px}
+.tripnav button{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;border:1.5px solid var(--ink);background:var(--paper-hi);color:var(--ink);border-radius:999px;padding:7px 13px;cursor:pointer;transition:all .18s ease}
+.tripnav button:hover{transform:translateY(-1px)}
+.tripnav button.on{background:var(--ink);color:var(--paper-hi)}
+.tripview{display:none}
+.tripview.active{display:block}
 
 /* ---------- table view ---------- */
 .viewseg{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
@@ -527,7 +533,16 @@ html.js .tv-head{display:none}
 </div><!-- /view-vote -->
 
 <div class="pageview" id="view-itin">
-<h2 class="viewhead">The Itinerary — Trip A in full</h2>
+<h2 class="viewhead">The Itinerary — the final six in full</h2>
+<nav class="tripnav" id="tripnav">
+  <button class="on" data-trip="a">A · Lisbon+Porto Apr</button>
+  <button data-trip="b">B · Lisbon+Porto Mar</button>
+  <button data-trip="c">C · Como+Bergamo</button>
+  <button data-trip="d">D · Cologne double</button>
+  <button data-trip="e">E · Lisbon+Braga Jan</button>
+  <button data-trip="f">F · Seville derby</button>
+</nav>
+<div class="tripview active" id="trip-a">
 
 
 <div class="day">
@@ -589,9 +604,238 @@ html.js .tv-head{display:none}
   </ul>
 </div>
 
-<div class="alt"><strong>Plan B — Como + Bergamo, same weekend (~£460pp):</strong> Ryanair STN→Bergamo Sat early, bus+train to Como (~2½h), Como v Frosinone at the lakeside Sinigaglia; Sunday train to Bergamo (~2h), Città Alta wander, Atalanta v Udinese; Monday Bergamo→STN 05:45. Dearer hotels, harder Como ticket — but it's Lake Como. Both plans stay alive until the 22 March kick-off confirmations; the hotel hedge costs nothing.</div>
+<div class="alt"><strong>Plan B — Como + Bergamo, same weekend (~£460pp):</strong> Ryanair STN→Bergamo Sat early, bus+train to Como (~2½h), Como v Frosinone at the lakeside Sinigaglia; Sunday train to Bergamo (~2h), Città Alta wander, Atalanta v Udinese; Monday Bergamo→STN 05:45. Dearer hotels, harder Como ticket — but it's Lake Como. Both plans stay alive until the 22 March kick-off confirmations; the hotel hedge costs nothing. Full day-by-day now under <strong>Trip C</strong> above.</div>
 
-<p class="fine">All match days/times are matchday-weekend allocations — Portugal confirms exact kick-offs only ~10 days out, so build the weekend around the cities and buy tickets late. Fixtures can move for European commitments (Benfica/Porto). Flight times shown are current-season schedules; April 2027 timings may shift slightly when released. Buy tickets from official club sites only.</p>
+</div><!-- /trip-a -->
+
+<div class="tripview" id="trip-b">
+<div class="day">
+  <div class="dhead"><span class="dnum">Sat 13 Mar</span><span class="dtitle">Birmingham → Lisbon → the Luz</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~10:15</span><span class="what"><strong>easyJet BHX → Lisbon</strong> (~2h50, Portugal is on UK time — land ~13:05). Winter-schedule fares — largely bookable already.</span></div>
+    <div class="step"><span class="when">14:00</span><span class="what">Check in around <strong>Baixa / Avenida da Liberdade</strong> (3★ ~£95–125/night in March). Alfama backstreets, tram 28, a bifana in the early-spring sun.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Benfica v Santa Clara — <a href="https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20da%20Luz%2C%20Lisboa" target="_blank" rel="noopener">Estádio da Luz ↗</a></div><div class="s">KO TBC · Metro blue line to Colégio Militar/Luz · tickets €20–85, slbenfica.pt</div></div>
+      65,000 for a routine home fixture — the Luz doesn't do quiet. Bairro Alto after.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Sun 14 Mar</span><span class="dtitle">The coast train → Porto → the Dragão</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~11:00</span><span class="what"><strong>Alfa Pendular, Lisboa Oriente → Porto Campanhã</strong> (~2h50; Promo fares from ~€12.50 when booking opens 60 days out, ~13 Jan).</span></div>
+    <div class="step"><span class="when">14:00</span><span class="what">Drop bags (centre or near Campanhã, ~£70–105/night). <strong>Ribeira riverside</strong>, port cellars across in Gaia.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ FC Porto v Gil Vicente — <a href="https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20do%20Drag%C3%A3o%2C%20Porto" target="_blank" rel="noopener">Estádio do Dragão ↗</a></div><div class="s">KO TBC · Dragão is a 6-min walk from Campanhã · tickets €15–45, bilhetes.fcporto.pt</div></div>
+      Francesinha afterwards if you dare.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Mon 15 Mar</span><span class="dtitle">Home by mid-morning</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~06:15</span><span class="what"><strong>Ryanair Porto → Stansted</strong> (lands ~09:00; pre-book the ~€25 taxi — metro starts too late), or the evening flight to BHX.</span></div>
+  </div>
+</div>
+<h2 class="sec">The damage — per person, twin share, booked early</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th><th>Est.</th></tr>
+  <tr><td>Flights</td><td>Open-jaw out LIS / back OPO, winter schedule</td><td>£70–110</td></tr>
+  <tr><td>Trains & transfers</td><td>Alfa Pendular promo + metros + airport legs</td><td>£25–40</td></tr>
+  <tr><td>Hotels ×2 nights</td><td>Lisbon ~£110 + Porto ~£85, per person twin</td><td>£85–125</td></tr>
+  <tr><td>Match tickets ×2</td><td>Benfica €20–85 + Porto €15–45</td><td>£40–95</td></tr>
+  <tr><td>Food & beer</td><td>2½ days, eating well</td><td>£110–130</td></tr>
+  <tr class="total"><td>Total</td><td>Matches the card's honest range</td><td>~£330–500</td></tr>
+</table>
+<h2 class="sec">If this one wins — the booking order</h2>
+<div class="check"><ul>
+  <li><strong>Now:</strong> hotels on free cancellation (Lisbon + Porto); flights — winter schedule is live.</li>
+  <li><strong>~13 Jan 2027:</strong> CP train booking opens 60 days out — grab the Promo fares.</li>
+  <li><strong>~3 Mar 2027:</strong> kick-off days confirmed (~10 days out) — check Benfica-Sat / Porto-Sun holds; if flipped, reverse the route.</li>
+  <li><strong>~early Mar 2027:</strong> ticket sales open 1–2 weeks out — buy both the day they go live.</li>
+</ul></div>
+<div class="alt"><strong>Same rails as Trip A:</strong> identical cities, stations and airports a month earlier — everything in Trip A's airport question applies here unchanged. Graham's asterisk: Lincoln at Molineux that Saturday, a missable one.</div>
+</div><!-- /trip-b -->
+
+<div class="tripview" id="trip-c">
+<div class="day">
+  <div class="dhead"><span class="dnum">Sat 17 Apr</span><span class="dtitle">Stansted → Bergamo → Lake Como</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~06:25</span><span class="what"><strong>Ryanair STN → Milan Bergamo</strong> (4x daily from ~06:00 — go early; the ~13:45 BHX departure lands too late for a Saturday kick-off). Airport bus + train to Como, ~2.5h.</span></div>
+    <div class="step"><span class="when">13:00</span><span class="what">Lakeside lunch, funicular up to <strong>Brunate</strong> for the view. Check in near the lakefront (~£120–180/night — the one dear night of the trip).</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Como v Frosinone — <a href="https://www.google.com/maps/search/?api=1&query=Stadio%20Giuseppe%20Sinigaglia%2C%20Como" target="_blank" rel="noopener">Stadio Sinigaglia ↗</a></div><div class="s">KO TBC · 10-min lakefront walk · phased sale at tickets.comofootball.com, ~2 wks out</div></div>
+      12,400 seats between the mountains and the water — the prettiest ground in Serie A.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Sun 18 Apr</span><span class="dtitle">Como → Bergamo → the Gewiss</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~10:30</span><span class="what"><strong>Train Como → Bergamo via Milan</strong> (~2h). Funicular to the walled <strong>Città Alta</strong>, casoncelli and polenta lunch. Bergamo bed ~£80–120/night.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Atalanta v Udinese — <a href="https://www.google.com/maps/search/?api=1&query=Gewiss%20Stadium%2C%20Bergamo" target="_blank" rel="noopener">Gewiss Stadium ↗</a></div><div class="s">KO TBC · stadium is in town, walkable · tickets €13–100, atalanta.it/Vivaticket</div></div>
+      Sleep in Bergamo — the airport is 15 minutes from the ground.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Mon 19 Apr</span><span class="dtitle">Home by mid-morning</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~05:45</span><span class="what"><strong>Ryanair Bergamo → Stansted</strong> for a morning arrival — or the ~16:55 to Birmingham if an extra lake morning beats an early night.</span></div>
+  </div>
+</div>
+<h2 class="sec">The damage — per person, twin share, booked early</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th><th>Est.</th></tr>
+  <tr><td>Flights</td><td>STN→BGY return, Ryanair summer release</td><td>£40–90</td></tr>
+  <tr><td>Trains & transfers</td><td>Airport bus, Como legs, funiculars</td><td>£30–50</td></tr>
+  <tr><td>Hotels ×2 nights</td><td>Como lakeside + Bergamo, per person twin</td><td>£110–160</td></tr>
+  <tr><td>Match tickets ×2</td><td>Como TBC (2026-27 prices unpublished) + Atalanta €13–100</td><td>£55–120</td></tr>
+  <tr><td>Food & beer</td><td>Lakeside prices Saturday, honest Bergamo Sunday</td><td>£145–160</td></tr>
+  <tr class="total"><td>Total</td><td>The scenery premium is real</td><td>~£380–580</td></tr>
+</table>
+<h2 class="sec">If this one wins — the booking order</h2>
+<div class="check"><ul>
+  <li><strong>Now:</strong> hotels on free cancellation — Como fills fast in spring.</li>
+  <li><strong>~16 Nov 2026:</strong> Ryanair summer 2027 release — book STN↔BGY the week it appears.</li>
+  <li><strong>~mid-Mar 2027:</strong> Serie A confirms kick-off days (~4–6 wks out) — pick the final Como/Atalanta order then.</li>
+  <li><strong>~5 Apr 2027:</strong> Como's phased sale opens ~2 wks out — be online at open; Atalanta is the comfortable buy. Italian tickets are named — have every passport ready, buy all seats in one transaction.</li>
+</ul></div>
+<div class="alt"><strong>The insurance policy:</strong> four games within an hour that weekend — Monza v Inter and Milan v Napoli share the round — so if kick-off days fall awkwardly there's always a swap. No leg over 90 minutes.</div>
+</div><!-- /trip-c -->
+
+<div class="tripview" id="trip-d">
+<div class="day">
+  <div class="dhead"><span class="dnum">Sat 24 Apr</span><span class="dtitle">Birmingham → the Rhineland → the RheinEnergie</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">Morning</span><span class="what"><strong>BHX → Düsseldorf</strong> (~1h20) or STN → Cologne, then train to Köln Hbf. Drop bags near the Altstadt (~£80–120/night — one base does both grounds).</span></div>
+    <div class="step"><span class="when">13:00</span><span class="what">The cathedral is at the station door. Brauhaus lunch — kölsch arrives until you put the mat on the glass.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Köln v Mainz — <a href="https://www.google.com/maps/search/?api=1&query=RheinEnergieStadion%2C%20K%C3%B6ln" target="_blank" rel="noopener">RheinEnergieStadion ↗</a></div><div class="s">KO TBC · tram 1 to Müngersdorf, free with a match ticket · €15–25 standing, fc.de</div></div>
+      50,000, a goat mascot, and the loudest routine fixture you'll ever see.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Sun 25 Apr</span><span class="dtitle">Thirty minutes to Borussia-Park</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~12:00</span><span class="what">Train to <strong>Mönchengladbach Hbf</strong> (~30 min) + stadium shuttle. Spare hours in Cologne first: Ludwig Museum, Rhine promenade.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Gladbach v Schalke — <a href="https://www.google.com/maps/search/?api=1&query=Borussia-Park%2C%20M%C3%B6nchengladbach" target="_blank" rel="noopener">Borussia-Park ↗</a></div><div class="s">KO TBC · members-weighted sale at borussia.de — Köln is the banker if this one sells out</div></div>
+      54,000 and Schalke's travelling wall — April football with the volume up.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Mon 26 Apr</span><span class="dtitle">The short hop home</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">Morning</span><span class="what">Fly home from <strong>CGN or DUS</strong> — it's the best-connected corner of Germany, morning options both.</span></div>
+  </div>
+</div>
+<h2 class="sec">The damage — per person, twin share, booked early</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th><th>Est.</th></tr>
+  <tr><td>Flights</td><td>BHX→DUS or STN→CGN return</td><td>£60–110</td></tr>
+  <tr><td>Local transport</td><td>Trains + shuttles; match tickets cover match-day transit</td><td>£15–25</td></tr>
+  <tr><td>Hotels ×2 nights</td><td>One Cologne base, per person twin</td><td>£75–110</td></tr>
+  <tr><td>Match tickets ×2</td><td>Köln €15–25 standing + Gladbach if the sale opens</td><td>£35–75</td></tr>
+  <tr><td>Food & beer</td><td>Brauhaus prices — Germany is kind</td><td>£95–110</td></tr>
+  <tr class="total"><td>Total</td><td>The cheapest weekend on the shortlist</td><td>~£280–430</td></tr>
+</table>
+<h2 class="sec">If this one wins — the booking order</h2>
+<div class="check"><ul>
+  <li><strong>Now:</strong> Cologne hotel on free cancellation.</li>
+  <li><strong>~Nov 2026:</strong> Ryanair summer release for STN→CGN; Eurowings BHX→DUS is usually bookable sooner.</li>
+  <li><strong>~mid-Mar 2027:</strong> Bundesliga confirms Fri/Sat/Sun slots (~5 wks out) — the double only works if the days split.</li>
+  <li><strong>~late Mar 2027:</strong> Köln general sale opens ~3–4 wks out — the banker; try Gladbach the moment any public phase appears.</li>
+</ul></div>
+<div class="alt"><strong>The Graham conversation:</strong> QPR at Molineux that Saturday, with run-in stakes — his call, made honestly on the card's score.</div>
+</div><!-- /trip-d -->
+
+<div class="tripview" id="trip-e">
+<div class="day">
+  <div class="dhead"><span class="dnum">Sat 9 Jan</span><span class="dtitle">Birmingham → Lisbon → the Alvalade</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">Morning</span><span class="what"><strong>BHX or STN → Lisbon</strong> — winter fares are on sale <strong>today</strong> (~£50–110 rtn). January Lisbon is 8–15°C and the miradouros are empty.</span></div>
+    <div class="step"><span class="when">14:00</span><span class="what">Check in around Baixa (~£80–110/night — January is the cheap month). Alfama, tram 28, ginjinha to warm up.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Sporting v Santa Clara — <a href="https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20Jos%C3%A9%20Alvalade%2C%20Lisboa" target="_blank" rel="noopener">Estádio José Alvalade ↗</a></div><div class="s">KO TBC · Campo Grande metro · tickets ~€20–40, sporting.pt</div></div>
+      The green half of Lisbon at home — an easy ticket in a proper ground.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Sun 10 Jan</span><span class="dtitle">North to the granite Municipal</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~09:30</span><span class="what"><strong>Alfa Pendular to Porto</strong> (~2h50, Promo from ~€12.50 — booking opens ~10 Nov). Drop bags in Porto (~£60–90/night), local train on to Braga (~1h).</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Braga v Porto — <a href="https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20Municipal%20de%20Braga" target="_blank" rel="noopener">Estádio Municipal ↗</a></div><div class="s">KO TBC · carved into a quarry face, 2km NW of town — taxi up · scbraga.pt, sale ~1–2 wks out, act on release day</div></div>
+      A genuine top-table clash in one of Europe's strangest, greatest grounds. Back to Porto to sleep.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Mon 11 Jan</span><span class="dtitle">Home by mid-morning</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">~06:15</span><span class="what"><strong>Ryanair Porto → Stansted</strong> (lands ~09:00; pre-book the ~€25 taxi — metro starts too late), or the evening flight to BHX. Rain jacket essential — Porto in January is wet.</span></div>
+  </div>
+</div>
+<h2 class="sec">The damage — per person, twin share, booked early</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th><th>Est.</th></tr>
+  <tr><td>Flights</td><td>Winter fares, on sale now</td><td>£55–110</td></tr>
+  <tr><td>Trains & transfers</td><td>Alfa Pendular + Braga legs + taxis</td><td>£25–45</td></tr>
+  <tr><td>Hotels ×2 nights</td><td>January Lisbon + Porto, per person twin</td><td>£75–105</td></tr>
+  <tr><td>Match tickets ×2</td><td>Sporting €20–40 + Braga €20–45</td><td>£40–85</td></tr>
+  <tr><td>Food & beer</td><td>Portugal in winter — kindest prices on the board</td><td>£105–135</td></tr>
+  <tr class="total"><td>Total</td><td>Bookable at today's prices, no waiting</td><td>~£300–480</td></tr>
+</table>
+<h2 class="sec">If this one wins — the booking order</h2>
+<div class="check"><ul>
+  <li><strong>Now:</strong> flights AND hotels — the whole trip is on sale today; that's the point of it.</li>
+  <li><strong>~10 Nov 2026:</strong> CP train booking opens 60 days out.</li>
+  <li><strong>Early Dec 2026:</strong> FA Cup third-round draw — Graham learns his fate.</li>
+  <li><strong>~Late Dec 2026:</strong> kick-off days confirmed (~10 days out); Braga tickets on release day, Sporting any time.</li>
+</ul></div>
+<div class="alt"><strong>Why it's 5th not 1st:</strong> the Braga ticket is the one real risk — 30,000 seats for a top-table clash — and January weather is a coin toss. But nothing else on the board can be fully booked this week.</div>
+</div><!-- /trip-e -->
+
+<div class="tripview" id="trip-f">
+<div class="day">
+  <div class="dhead"><span class="dnum">Sat 6 Feb</span><span class="dtitle">South to the winter sun</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">Morning</span><span class="what"><strong>LGW / STN / MAN → Seville</strong> (no BHX direct, ~£70–140). February Seville: 6–17°C and usually blue skies.</span></div>
+    <div class="step"><span class="when">14:00</span><span class="what">Check in around Santa Cruz or Alameda (~£75–110/night — book beds <strong>before</strong> tickets, derby weekend fills). Tapas in Triana, Plaza de España in the low sun.</span></div>
+    <div class="step"><span class="when">Evening</span><span class="what">
+      <div class="matchbox"><div class="m">⚽ Betis v Sevilla — <a href="https://www.google.com/maps/search/?api=1&query=Estadio%20La%20Cartuja%2C%20Sevilla" target="_blank" rel="noopener">Estadio La Cartuja ↗</a></div><div class="s">If it lands Saturday · La Cartuja is 4km north on the island — taxi or bus, allow a full hour on derby day</div></div>
+      El Gran Derbi — one of world football's great occasions, gettable only because of the 70,000-seat temporary home.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Sun 7 Feb</span><span class="dtitle">Derby day — or the best Sunday in Spain</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">All day</span><span class="what">Match day if Sunday (La Liga confirms ~2 weeks out). Otherwise: the <strong>Alcázar</strong>, the cathedral and Giralda, and the best 17°C February lunch in Europe.</span></div>
+  </div>
+</div>
+<div class="day">
+  <div class="dhead"><span class="dnum">Mon 8 Feb</span><span class="dtitle">Fly home</span></div>
+  <div class="dbody">
+    <div class="step"><span class="when">Morning</span><span class="what">Home from <strong>SVQ</strong> — or via Málaga (~2h by train) if its wider route map times better.</span></div>
+  </div>
+</div>
+<h2 class="sec">The damage — per person, twin share, booked early</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th><th>Est.</th></tr>
+  <tr><td>Flights</td><td>LGW/STN/MAN→SVQ return, February</td><td>£70–140</td></tr>
+  <tr><td>Local transport</td><td>Airport legs + derby-day taxis</td><td>£20–30</td></tr>
+  <tr><td>Hotels ×2 nights</td><td>Santa Cruz/Alameda, per person twin</td><td>£75–110</td></tr>
+  <tr><td>Match ticket ×1</td><td>Derby premium — expect dynamic pricing</td><td>£60–120</td></tr>
+  <tr><td>Food & beer</td><td>Tapas prices, long lunches</td><td>£95–120</td></tr>
+  <tr class="total"><td>Total</td><td>One match, one huge occasion</td><td>~£320–520</td></tr>
+</table>
+<h2 class="sec">If this one wins — the booking order</h2>
+<div class="check"><ul>
+  <li><strong>Now:</strong> hotel on free cancellation — the bed is the easy half.</li>
+  <li><strong>~Autumn 2026:</strong> flights as winter fares release for February.</li>
+  <li><strong>~Late Jan 2027:</strong> kick-off day confirmed ~2 weeks out; Betis's two-phase public sale opens — be online for phase one and expect €80+ dynamic pricing.</li>
+</ul></div>
+<div class="alt"><strong>The pivot:</strong> PSG v Marseille is the same Sunday if the ticket fails and Paris appeals instead — but there is no fallback fixture in Seville itself; this is a one-shot weekend. Wolves are away at Charlton — a clean Graham week.</div>
+</div><!-- /trip-f -->
+
+<p class="fine">All match days/times are matchday-weekend allocations — leagues confirm exact kick-offs late (Portugal ~10 days, Spain ~2 weeks, Italy and Germany 4–6 weeks), so build each weekend around the cities and buy tickets late. Fixtures can move for European commitments (Benfica/Porto). Flight times shown are current-season schedules; April 2027 timings may shift slightly when released. Buy tickets from official club sites only.</p>
 
 </div><!-- /view-itin -->
 
@@ -929,6 +1173,13 @@ document.getElementById('copybtn').addEventListener('click',e=>{
   const done=()=>{e.target.textContent='Copied \u2713';setTimeout(()=>e.target.textContent='Copy list',1500)};
   const legacy=()=>{const t=document.createElement('textarea');t.value=text;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(err){}t.remove();ok?done():prompt('Copy this:',text)};
   navigator.clipboard?navigator.clipboard.writeText(text).then(done,legacy):legacy();
+});
+document.getElementById('tripnav').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#tripnav button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  document.querySelectorAll('.tripview').forEach(v=>v.classList.remove('active'));
+  document.getElementById('trip-'+b.dataset.trip).classList.add('active');
 });
 document.getElementById('controls').style.display='';
 render();
